@@ -1,8 +1,9 @@
 import discord
+import os
 from discord.ext import commands, tasks
 
 # 봇 토큰과 특정 채널 ID 설정
-TOKEN = 'MTI4OTUyMDgyMTU1MDg0NjA0Mw.GlPZ68.-lUNQqJWPNzwZ5JL67rdsv6F_o4IeZYwBe-Zp4'
+TOKEN = 'acess_token'
 TARGET_CHANNEL_ID = 1289520626901717070  # 이미지가 올라갈 채널 ID
 
 # 유저별 등록 횟수를 저장할 딕셔너리
@@ -60,4 +61,5 @@ async def register_artwork(ctx):
         await ctx.send("> 오류가 발생했습니다. 관리자가 채널 설정을 확인해주세요.")
 
 # 봇 실행
+excess_token = os.environ["봇 토큰"]
 bot.run(TOKEN)
